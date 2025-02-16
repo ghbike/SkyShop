@@ -8,11 +8,8 @@
 git clone https://github.com/ghbike/SkyShop
     '''
 
-- Установите зависимости:
+- Установите зависимости. Используйте pyproject.toml
 
-   '''
-pip install -r requirements.txt
-   '''
 
 ## Использование
 - Создайте базу товаров и категорий
