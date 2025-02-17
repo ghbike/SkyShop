@@ -18,7 +18,6 @@ def first_category():
     )
 
 
-
 @pytest.fixture
 def second_category():
     return Category(
@@ -29,6 +28,7 @@ def second_category():
             Product("Macbook", "Macbook pro 16 inch", 250_000.00, 3)
         ]
     )
+
 
 @pytest.fixture
 def product():
