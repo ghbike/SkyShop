@@ -1,5 +1,5 @@
 def test_product_init(product):
-    assert product.name == "Iphone"
-    assert product.description == "Iphone 10 pro max"
-    assert product.price == 200_000.00
-    assert product.quantity == 3
+    assert product.name == "Cube"
+    assert product.description == "Road Bicycle Cube Peloton"
+    assert product.price == 150_000.00
+    assert product.quantity == 1

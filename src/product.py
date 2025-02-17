@@ -6,7 +6,7 @@ class Product:
 
     def __init__(self, name, description, price, quantity):
         """
-        инициализация объекта класса Product
+        инициализация экземпляра класса Product
         """
         self.name = name
         self.description = description
@@ -14,10 +14,10 @@ class Product:
         self.quantity = quantity
 
 
-if __name__ == '__main__':
-    product = Product("bicycle", "Road Bicycle Cube Peloton", 150_000.00, 1)
-
-    print(product.name)
-    print(product.description)
-    print(product.price)
-    print(product.quantity)
+# if __name__ == '__main__':
+#     product = Product("Cube", "Road Bicycle Cube Peloton", 150_000.00, 1)
+#
+#     print(product.name)
+#     print(product.description)
+#     print(product.price)
+#     print(product.quantity)
