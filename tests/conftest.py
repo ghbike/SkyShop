@@ -7,29 +7,29 @@ from src.product import Product
 @pytest.fixture
 def first_category():
     return Category(
-        name="products for cycling",
-        description="Bikes, jerseys and more..",
+        name="Bicycling",
+        description="Everything for bicycling",
         products=[
-            Product("bike", "Peloton road bike Cube", 100_000.00, 1),
-            Product("helmet", "Guro velo helmet", 10_000.00, 2),
-            Product("jersey", "Men's Pro Cycling Jersey", 100_000.00, 5),
-            Product("Bicycle tube", "Continental Race Bicycle Tube", 3_000.00, 3)
+            Product("Cube", "Road Bicycle Cube Peloton", 150_000.00, 1),
+            Product("Giro", "Helmet Giro for road cycling", 10_000.00, 3),
+            Product("Wahoo", "Wahoo velo computer", 30_000.00, 2),
+            Product("jersey", "Man's long sleeve jersey", 5_000.00, 5)
         ]
     )
+
 
 
 @pytest.fixture
 def second_category():
     return Category(
-        name="Apple products",
-        description="Iphones, airpods etc",
+        name="Apple",
+        description="Everything from Apple",
         products=[
-            Product("Iphone", "Iphone 10 pro max", 200_000.00, 3),
-            Product("Macbook", "Macbook pro", 300_000.00, 1)
+            Product("iphone", "iphone 16 pro max", 200_000.00, 2),
+            Product("Macbook", "Macbook pro 16 inch", 250_000.00, 3)
         ]
     )
 
-
 @pytest.fixture
 def product():
-    return Product("Iphone", "Iphone 10 pro max", 200_000.00, 3)
+    return Product("Cube", "Road Bicycle Cube Peloton", 150_000.00, 1)
