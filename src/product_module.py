@@ -29,7 +29,13 @@ class Product:
     @price.setter
     def price(self, new_price):
         if new_price > 0:
-            self.__price = new_price
+            if new_price < self.__price:
+                user_decision = input("новая цена ниже. подтверждаете?\n")
+                if user_decision == 'y':
+                    self.__price = new_price
+
+            else:
+                self.__price = new_price
         else:
             print("Цена не должна быть нулевая или отрицательная")
 
@@ -50,7 +56,14 @@ if __name__ == '__main__':
     print(product2.price)
     print(product2.quantity)
 
-    print('\n--------------new price----------')
+    print('\n--------------new big price----------')
+    product2.price = 999_999.00
+    print(product2.name)
+    print(product2.description)
+    print(product2.price)
+    print(product2.quantity)
+
+    print('\n--------------new small price----------')
     product2.price = 777.77
     print(product2.name)
     print(product2.description)
