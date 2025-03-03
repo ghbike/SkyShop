@@ -13,6 +13,12 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+    def __str__(self):
+        """
+        создает строковое отображение экземпляра класса
+        """
+        f'{self.name}, {self.price} руб. Остаток: {self.quantity} шт.'
+
     @classmethod
     def new_product(cls, product_dct):
         """
