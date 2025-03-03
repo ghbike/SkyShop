@@ -22,6 +22,9 @@ class Category:
         Category.product_count += len(products) if products else 0
 
     def __str__(self):
+        """
+        создает строковое отображение экземпляра класса
+        """
         total_quantity = 0
         for product in self.__products:
             total_quantity += product.quantity

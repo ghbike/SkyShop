@@ -26,3 +26,8 @@ def test_add_product(first_category, second_product):
     first_category.add_product(second_product)
     assert len(first_category.products.split('\n')) == 5
     assert first_category.products.split('\n')[4] == "Rockbros, 2000.0 руб. Остаток: 11 шт."
+
+
+def test_category_str(first_category, second_category):
+    assert str(first_category) == 'Bicycling, количество продуктов: 11 шт.'
+    assert str(second_category) == 'Apple, количество продуктов: 5 шт.'
