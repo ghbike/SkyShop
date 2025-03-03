@@ -51,6 +51,13 @@ class Category:
             products_lst.append(str(product))
         return "\n".join(products_lst)
 
+    @property
+    def product_list(self):
+        """
+        геттер выводит список товаров этой категории
+        """
+        return self.__products
+
 
 # if __name__ == "__main__":
 #     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
@@ -64,26 +71,26 @@ class Category:
 #     print(category1)
 #
 #     print('\n--------список товаров:')
-#     print(category1.products)
-#     print('\n--------список товаров:')
-#     product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
-#     category1.add_product(product4)
-#     print(category1.products)
-#     print(f'количество товаров: {category1.product_count}')
-#     print()
-#
-#     new_product = Product.new_product(
-#         {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 180000.0,
-#          "quantity": 5})
-#     print(f'новый продукт: {new_product.name}')
-#     print(f'описание: {new_product.description}')
-#     print(f'цена: {new_product.price}')
-#     print(f'количество: {new_product.quantity}')
-#
-#     new_product.price = 800
-#     print(f' цена: {new_product.price}')
-#
-#     new_product.price = -100
-#     print(f' цена: {new_product.price}')
-#     new_product.price = 0
-#     print(f' цена: {new_product.price}')
+    # print(category1.products)
+    # print('\n--------список товаров:')
+    # product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
+    # category1.add_product(product4)
+    # print(category1.products)
+    # print(f'количество товаров: {category1.product_count}')
+    # print()
+    #
+    # new_product = Product.new_product(
+    #     {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 180000.0,
+    #      "quantity": 5})
+    # print(f'новый продукт: {new_product.name}')
+    # print(f'описание: {new_product.description}')
+    # print(f'цена: {new_product.price}')
+    # print(f'количество: {new_product.quantity}')
+    #
+    # new_product.price = 800
+    # print(f' цена: {new_product.price}')
+    #
+    # new_product.price = -100
+    # print(f' цена: {new_product.price}')
+    # new_product.price = 0
+    # print(f' цена: {new_product.price}')
