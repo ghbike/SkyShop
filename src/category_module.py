@@ -1,4 +1,4 @@
-# from src.product_module import Product
+from src.product_module import Product
 
 class Category:
     name: str
@@ -38,7 +38,8 @@ class Category:
         """
         products_lst = []
         for product in self.__products:
-            products_lst.append(f"{product.name}, {int(product.price)} руб. Остаток: {product.quantity} шт.")
+            # products_lst.append(f"{product.name}, {int(product.price)} руб. Остаток: {product.quantity} шт.")
+            products_lst.append(str(product))
         return "\n".join(products_lst)
 
 
@@ -58,21 +59,21 @@ class Category:
 #     product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
 #     category1.add_product(product4)
 #     print(category1.products)
-#     print('\n--------количество продуктов:')
-#     print(category1.product_count)
+#     print(f'количество товаров: {category1.product_count}')
+#     print()
 #
 #     new_product = Product.new_product(
 #         {"name": "Samsung Galaxy S23 Ultra", "description": "256GB, Серый цвет, 200MP камера", "price": 180000.0,
 #          "quantity": 5})
-#     print(new_product.name)
-#     print(new_product.description)
-#     print(new_product.price)
-#     print(new_product.quantity)
+#     print(f'новый продукт: {new_product.name}')
+#     print(f'описание: {new_product.description}')
+#     print(f'цена: {new_product.price}')
+#     print(f'количество: {new_product.quantity}')
 #
 #     new_product.price = 800
-#     print(new_product.price)
+#     print(f' цена: {new_product.price}')
 #
 #     new_product.price = -100
-#     print(new_product.price)
+#     print(f' цена: {new_product.price}')
 #     new_product.price = 0
-#     print(new_product.price)
+#     print(f' цена: {new_product.price}')
