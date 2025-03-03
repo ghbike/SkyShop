@@ -18,11 +18,16 @@ def test_category_init(first_category, second_category):
 
 
 def test_products_getter(first_category):
-    assert  first_category.products == ('Cube, 150000 руб. Остаток: 1 шт.\nGiro, 10000 руб. Остаток: 3 шт.\nWahoo, 30000 руб. Остаток: 2 шт.\njersey, 5000 руб. Остаток: 5 шт.')
+    assert  first_category.products == ('Cube, 150000.0 руб. Остаток: 1 шт.\nGiro, 10000.0 руб. Остаток: 3 шт.\nWahoo, 30000.0 руб. Остаток: 2 шт.\njersey, 5000.0 руб. Остаток: 5 шт.')
 
 
 def test_add_product(first_category, second_product):
     assert len(first_category.products.split('\n')) == 4
     first_category.add_product(second_product)
     assert len(first_category.products.split('\n')) == 5
-    assert first_category.products.split('\n')[4] == "Rockbros, 2000 руб. Остаток: 11 шт."
+    assert first_category.products.split('\n')[4] == "Rockbros, 2000.0 руб. Остаток: 11 шт."
+
+
+def test_category_str(first_category, second_category):
+    assert str(first_category) == 'Bicycling, количество продуктов: 11 шт.'
+    assert str(second_category) == 'Apple, количество продуктов: 5 шт.'

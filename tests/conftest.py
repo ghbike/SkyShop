@@ -1,6 +1,7 @@
 import pytest
 
 from src.category_module import Category
+from src.my_iterator import MyIterator
 from src.product_module import Product
 
 

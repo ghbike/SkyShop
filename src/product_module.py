@@ -13,6 +13,20 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+    def __str__(self):
+        """
+        создает строковое отображение экземпляра класса
+        """
+        return f'{self.name}, {self.price} руб. Остаток: {self.quantity} шт.'
+
+    def __add__(self, other):
+        """
+        реализована возможность складывать продукты
+        :param other: другой продукт
+        :return: полная стоимость всех товаров на складе
+        """
+        return self.__price * self.quantity + other.__price * other.quantity
+
     @classmethod
     def new_product(cls, product_dct):
         """
@@ -40,15 +54,11 @@ class Product:
 
 
 # if __name__ == '__main__':
-#     product1 = Product("Cube", "Road Bicycle Cube Peloton", 150_000.00, 11)
-#     print("\n------name--description--price--quantity-----product1")
-#     print(product1.name)
-#     print(product1.description)
-#     print(product1.price)
-#     print(product1.quantity)
-#
 #     dct = {"name": "Colnago", "description": "Best cycle for Giro", "price": 500_000.00, "quantity": 1}
 #     product2 = Product.new_product(dct)
+#     product11 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+#     product12 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
+#     print(f'сумма продуктов:  {product11 + product12}')
 #     print("\n------name--description--price--quantity-----product2")
 #     print(product2.name)
 #     print(product2.description)
