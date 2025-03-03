@@ -21,6 +21,12 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
+    def __str__(self):
+        total_quantity = 0
+        for product in self.__products:
+            total_quantity += product.quantity
+        return f'{self.name}, количество продуктов: {total_quantity} шт.'
+
     def add_product(self, product):
         """
         добавляет продукт в список продуктов категории self
@@ -52,6 +58,7 @@ class Category:
 #         "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
 #         [product1, product2, product3]
 #     )
+#     print(category1)
 #
 #     print('\n--------список товаров:')
 #     print(category1.products)
