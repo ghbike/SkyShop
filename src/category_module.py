@@ -36,8 +36,11 @@ class Category:
         увеличивает общее количество продуктов на единицу
         :param product: экземпляр класса Product
         """
-        self.__products.append(product)
-        self.product_count += 1
+        if isinstance(product, Product):
+            self.__products.append(product)
+            self.product_count += 1
+        else:
+            raise TypeError
 
     @property
     def products(self):
