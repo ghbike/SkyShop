@@ -1,8 +1,10 @@
 import pytest
 
 from src.category_module import Category
+from src.lawngrass import LawnGrass
 from src.my_iterator import MyIterator
 from src.product_module import Product
+from src.smartphone import Smartphone
 
 
 @pytest.fixture
@@ -59,3 +61,23 @@ def second_product():
 @pytest.fixture
 def new_product_dict():
     return Product.new_product({"name": "Rockbros", "description": "Glasses for cycling", "price": 2_000.00, "quantity": 11})
+
+
+@pytest.fixture
+def first_smartphone():
+    return Smartphone("Nokia", "for classic lovers", 12_000.00, 1, 0.5, "8800", 8, 'Silver')
+
+
+@pytest.fixture
+def second_smartphone():
+    return Smartphone("Iphone", "hit of selling", 120_000.00, 10, 1.7, "16 Max", 128, 'Ultramarine')
+
+
+@pytest.fixture
+def first_lawngrass():
+    return LawnGrass("Ландшафтный бонсай", "износоустойчивый", 100.00, 15, "Russia", 8,  'green')
+
+
+@pytest.fixture
+def second_lawngrass():
+    return LawnGrass("Городской изумруд", "низкорастущий", 120.00, 17, "Iran", 12,  'emerald')
