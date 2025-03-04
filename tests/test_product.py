@@ -1,3 +1,6 @@
+import pytest
+
+
 def test_product_init(first_product, second_product):
     assert first_product.name == "Cube"
     assert first_product.description == "Road Bicycle Cube Peloton"
@@ -36,3 +39,26 @@ def test_product_str(first_product, second_product):
 
 def test_product_add(first_product, second_product):
     assert first_product + second_product == 172_000.0
+
+
+def test_smartphone_add(first_smartphone, second_smartphone):
+    assert first_smartphone + second_smartphone == 1_212_000.0
+
+
+def test_lawngrass_add(first_lawngrass, second_lawngrass):
+    assert first_lawngrass + second_lawngrass == 3_540.0
+
+
+def test_product_add_error(first_product, second_smartphone):
+    with pytest.raises(TypeError):
+        res = first_product + second_smartphone
+
+
+def test_smartphone_add_error(first_smartphone, second_lawngrass):
+    with pytest.raises(TypeError):
+        res = first_smartphone + second_lawngrass
+
+
+def test_lawngrass_add_error(first_lawngrass, second_product):
+    with pytest.raises(TypeError):
+        res = first_lawngrass + second_product

@@ -25,7 +25,9 @@ class Product:
         :param other: другой продукт
         :return: полная стоимость всех товаров на складе
         """
-        return self.__price * self.quantity + other.__price * other.quantity
+        if type(other) is type(self):
+            return self.__price * self.quantity + other.__price * other.quantity
+        raise TypeError
 
     @classmethod
     def new_product(cls, product_dct):
@@ -38,10 +40,19 @@ class Product:
 
     @property
     def price(self):
+        """
+        Геттер
+        :return: цена товара
+        """
         return self.__price
 
     @price.setter
     def price(self, new_price):
+        """
+        Сеттер
+        :param new_price:
+        :return: устанавливает новую цену
+        """
         if new_price > 0:
             if new_price < self.__price:
                 user_decision = input("новая цена ниже. подтверждаете?\n")

@@ -2,6 +2,9 @@ from src.product_module import Product
 from src.category_module import Category
 
 class MyIterator:
+    """
+    Класс итераторов перебирающих товары одной категории
+    """
     def __init__(self, category):
         self.category = category
 
