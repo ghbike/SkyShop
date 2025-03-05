@@ -1,5 +1,6 @@
 from src.product_module import Product
 
+
 class Smartphone(Product):
     name: str
     description: str

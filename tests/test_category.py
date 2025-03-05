@@ -1,6 +1,6 @@
 import pytest
 
-from tests.conftest import first_category, second_category, third_category, first_product, second_product, new_product_dict
+# from tests.conftest import first_category, second_category, second_product
 
 
 def test_category_init(first_category, second_category):
@@ -20,7 +20,8 @@ def test_category_init(first_category, second_category):
 
 
 def test_products_getter(first_category):
-    assert  first_category.products == ('Cube, 150000.0 руб. Остаток: 1 шт.\nGiro, 10000.0 руб. Остаток: 3 шт.\nWahoo, 30000.0 руб. Остаток: 2 шт.\njersey, 5000.0 руб. Остаток: 5 шт.')
+    assert first_category.products == ('Cube, 150000.0 руб. Остаток: 1 шт.\nGiro, 10000.0 руб. Остаток: 3 шт.\nWahoo, '
+                                       '30000.0 руб. Остаток: 2 шт.\njersey, 5000.0 руб. Остаток: 5 шт.')
 
 
 def test_add_product(first_category, second_product):
