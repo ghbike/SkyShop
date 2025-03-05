@@ -69,35 +69,35 @@ class Product(BaseProduct, PrintMixin):
             print("Цена не должна быть нулевая или отрицательная")
 
 
-if __name__ == '__main__':
-    dct = {"name": "Colnago", "description": "Best cycle for Giro", "price": 500_000.00, "quantity": 1}
-    product2 = Product.new_product(dct)
-    product11 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
-    product12 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
-    print(f'сумма продуктов:  {product11 + product12}')
-    print("\n------name--description--price--quantity-----product2")
-    print(product2.name)
-    print(product2.description)
-    print(product2.price)
-    print(product2.quantity)
-
-    print('\n--------------new big price----------')
-    product2.price = 999_999.00
-    print(product2.name)
-    print(product2.description)
-    print(product2.price)
-    print(product2.quantity)
-
-    print('\n--------------new small price----------')
-    product2.price = 777.77
-    print(product2.name)
-    print(product2.description)
-    print(product2.price)
-    print(product2.quantity)
-
-    print('\n--------------negative price------------')
-    product2.price = -777.77
-    print(product2.name)
-    print(product2.description)
-    print(product2.price)
-    print(product2.quantity)
+# if __name__ == '__main__':
+#     dct = {"name": "Colnago", "description": "Best cycle for Giro", "price": 500_000.00, "quantity": 1}
+#     product2 = Product.new_product(dct)
+#     product11 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+#     product12 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
+#     print(f'сумма продуктов:  {product11 + product12}')
+#     print("\n------name--description--price--quantity-----product2")
+#     print(product2.name)
+#     print(product2.description)
+#     print(product2.price)
+#     print(product2.quantity)
+#
+#     print('\n--------------new big price----------')
+#     product2.price = 999_999.00
+#     print(product2.name)
+#     print(product2.description)
+#     print(product2.price)
+#     print(product2.quantity)
+#
+#     print('\n--------------new small price----------')
+#     product2.price = 777.77
+#     print(product2.name)
+#     print(product2.description)
+#     print(product2.price)
+#     print(product2.quantity)
+#
+#     print('\n--------------negative price------------')
+#     product2.price = -777.77
+#     print(product2.name)
+#     print(product2.description)
+#     print(product2.price)
+#     print(product2.quantity)

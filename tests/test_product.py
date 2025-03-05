@@ -1,6 +1,5 @@
 import pytest
 
-
 def test_product_init(first_product, second_product):
     assert first_product.name == "Cube"
     assert first_product.description == "Road Bicycle Cube Peloton"
@@ -62,3 +61,6 @@ def test_smartphone_add_error(first_smartphone, second_lawngrass):
 def test_lawngrass_add_error(first_lawngrass, second_product):
     with pytest.raises(TypeError):
         res = first_lawngrass + second_product
+
+
+
