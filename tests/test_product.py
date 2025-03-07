@@ -51,14 +51,14 @@ def test_lawngrass_add(first_lawngrass, second_lawngrass):
 
 def test_product_add_error(first_product, second_smartphone):
     with pytest.raises(TypeError):
-        res = first_product + second_smartphone
+        [].append(first_product + second_smartphone)
 
 
 def test_smartphone_add_error(first_smartphone, second_lawngrass):
     with pytest.raises(TypeError):
-        res = first_smartphone + second_lawngrass
+        [].append(first_smartphone + second_lawngrass)
 
 
 def test_lawngrass_add_error(first_lawngrass, second_product):
     with pytest.raises(TypeError):
-        res = first_lawngrass + second_product
+        [].append(first_lawngrass + second_product)

@@ -1,5 +1,6 @@
-from src.product_module import Product
-from src.category_module import Category
+# from src.product_module import Product
+# from src.category_module import Category
+
 
 class MyIterator:
     """
