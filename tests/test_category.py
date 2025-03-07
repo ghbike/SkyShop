@@ -1,7 +1,5 @@
 import pytest
-
-# from tests.conftest import first_category, second_category, second_product
-
+from src.product_module import Product
 
 def test_category_init(first_category, second_category):
     assert first_category.name == "Bicycling"
@@ -53,3 +51,8 @@ def test_add_product_error(first_category):
 def test_category_str(first_category, second_category):
     assert str(first_category) == 'Bicycling, количество продуктов: 11 шт.'
     assert str(second_category) == 'Apple, количество продуктов: 5 шт.'
+
+
+def test_middle_price(first_category, category_without_products):
+    assert first_category.middle_price() == 48_750
+    assert category_without_products.middle_price() == 0

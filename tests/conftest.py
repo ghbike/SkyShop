@@ -85,3 +85,7 @@ def first_lawngrass():
 def second_lawngrass():
     return LawnGrass("Городской изумруд", "низкорастущий", 120.00, 17, "Iran",
                      12,  'emerald')
+
+@pytest.fixture
+def category_without_products():
+    return Category("Смартфоны","Смартфоны, не только как средство коммуникации",[])

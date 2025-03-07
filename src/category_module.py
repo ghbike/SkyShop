@@ -62,6 +62,12 @@ class Category:
         """
         return self.__products
 
+    def middle_price(self):
+        try:
+            return sum([product.price for product in self.__products]) / len(self.__products)
+        except ZeroDivisionError:
+            return 0
+
 
 # if __name__ == "__main__":
 #     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
@@ -73,8 +79,8 @@ class Category:
 #         [product1, product2, product3]
 #     )
 #     print(category1)
-#
-#     print('\n--------список товаров:')
+    #
+    # print('\n--------список товаров:')
     # print(category1.products)
     # print('\n--------список товаров:')
     # product4 = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
@@ -98,3 +104,14 @@ class Category:
     # print(f' цена: {new_product.price}')
     # new_product.price = 0
     # print(f' цена: {new_product.price}')
+    #
+    #
+    # print(category1.middle_product_price())
+    #
+    # category2 = Category(
+    #     "Смартфоны",
+    #     "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+    #     []
+    # )
+    #
+    # print(category2.middle_product_price())
